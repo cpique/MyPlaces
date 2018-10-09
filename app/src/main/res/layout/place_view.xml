@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/namePlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="Place name"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logoType"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Type logo"
+                android:src="@drawable/otros"/>
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Place type"/>
+
+        </LinearLayout>
+
+        //More content init
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logoAddress"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Address"
+                android:src="@android:drawable/ic_menu_myplaces"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Place address"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/phoneType"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Phone type"
+                android:src="@android:drawable/ic_menu_call"/>
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Phone type"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/urlType"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Type url"
+                android:src="@android:drawable/ic_menu_mapmode"/>
+
+            <TextView
+                android:id="@+id/url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Place url"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/commentType"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Type comment"
+                android:src="@android:drawable/ic_menu_info_details"/>
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Place comment"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/dateType"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Type date"
+                android:src="@android:drawable/ic_menu_my_calendar"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Place date"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logoHour"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Type logo"
+                android:src="@android:drawable/ic_menu_recent_history"/>
+
+            <TextView
+                android:id="@+id/hour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Place hour"/>
+
+        </LinearLayout>
+        <!-- Creo que los ultimos 2 linear layout (fecha y hora) en realidad deberian estar en el mismo layout, misma fila-->
+        <!--More content end -->
+
+        <RatingBar
+            android:id="@+id/ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@+id/photo"
+            android:rating="3" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="Photography"
+                android:src="@drawable/foto_epsg"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="Camera logo"
+                    android:src="@android:drawable/ic_menu_camera"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="Galery logo"
+                    android:src="@android:drawable/ic_menu_gallery"/>
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>
