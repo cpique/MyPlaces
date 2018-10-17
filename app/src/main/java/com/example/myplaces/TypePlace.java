@@ -22,6 +22,14 @@ public enum TypePlace {
         this.resource = resource;
     }
 
+    public static String[] getNames() {
+        String[] result = new String[TypePlace.values().length];
+        for(TypePlace type: TypePlace.values()) {
+            result[type.ordinal()] = type.text;
+        }
+        return result;
+    }
+
     public String getText() {
         return text;
     }

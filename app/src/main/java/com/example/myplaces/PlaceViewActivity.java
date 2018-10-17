@@ -122,10 +122,10 @@ public class PlaceViewActivity extends AppCompatActivity {
             case R.id.action_go:
                 return true;
             case R.id.action_edit:
+                editPlace(id);
                 return true;
             case R.id.action_delete:
-                MainActivity.places.delete((int)id);
-                finish();
+                deletePlace(id);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -135,5 +135,29 @@ public class PlaceViewActivity extends AppCompatActivity {
     public void killActivity()
     {
         finish();
+    }
+
+    public void deletePlace(final long id)
+    {
+        new AlertDialog.Builder(this)
+                .setTitle("Delete place")
+                .setMessage("Are you sure you want to delete this place?")
+                .setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        MainActivity.places.delete((int)id);
+                        finish();
+                    }
+                })
+                .setNegativeButton("Cancel", null)
+                .show();
+
+    }
+
+    public void editPlace(final long id)
+    {
+        Intent i = new Intent(PlaceViewActivity.this, PlaceEditActivity.class);
+        i.putExtra("id", id);
+        startActivity(i);
     }
 }

@@ -19,17 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".AboutActivity"
             android:label="Acerca de"
-            android:theme="@style/AlertDialog.AppCompat">
-
-        </activity>
-
-        <activity android:name=".PlaceViewActivity">
-
-        </activity>
+            android:theme="@style/AlertDialog.AppCompat"></activity>
+        <activity android:name=".PlaceViewActivity"></activity>
+        <activity android:name=".PlaceEditActivity"></activity>
     </application>
 
 </manifest>
